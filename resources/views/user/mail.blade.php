@@ -22,7 +22,7 @@
 		<div class="container ">
 
 			<div class="row">
-				<label class="col-md-2">Nombre </label>
+				<label class="col-md-2">Asunto </label>
 				<input type="text" name="name" class="col-md-6 form-control" required>	
 			</div><br>
 			<div class="row">
