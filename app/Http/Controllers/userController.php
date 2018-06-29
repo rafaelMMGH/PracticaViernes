@@ -31,8 +31,8 @@ class userController extends Controller
 
 		if ($checkUser) {
             $nombre=User::where('email',$email)->pluck('name');
-            session('nombre',$nombre);
-            //Session::put(['nombre'=>$nombre]);
+            //session('nombre',$nombre);
+            Session::put(['nombre'=>$nombre]);
             //$value=$request->session()->get('nombre');
 			$vista = 'welcome';
             $flag =false;
@@ -78,6 +78,12 @@ public function deleteUserdos($id,$idSesRec)
             return "te descubrimos eres un hacker";
         }
 
+    }
+
+    public function loout()
+    {
+      
+        return view('welcome');
     }
 
 }

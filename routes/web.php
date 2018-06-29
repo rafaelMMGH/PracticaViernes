@@ -30,6 +30,7 @@ Route::get('/registro', function(){
 Route::get('/mail', function(){
 	return view('user.mail');
 });
+Route::get('/logout','userController@loout');
 
 /*
 *** Rutas a controladores

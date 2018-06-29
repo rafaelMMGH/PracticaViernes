@@ -63,7 +63,10 @@
                         </li>   
                         <li class="nav-item">
                             <a class="nav-link" href=" {{ url('/mail') }}">Enviar Correo</a>
-                        </li>     
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {{ url('/logout') }}">Cerrar Session</a>
+                        </li>   
                     </ul>
                 </div>
             </div>
