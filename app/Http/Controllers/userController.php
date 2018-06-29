@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use DB;
+use Session;
 
 class userController extends Controller
 {
@@ -22,16 +23,24 @@ class userController extends Controller
 
     public function login(Request $request){
     	$email = $request['email'];
-    	$password = $request->password;
-    	$flag = true; 
+    	$password = $request->password; 
 
 		$checkUser = User::where('email',$email)->where('password',$password)->exists();
 
 		if ($checkUser) {
-			return view('welcome',compact('email'));
+			
+            $nombre = User::where('email',$email)->pluck('name');
+         //   session('nombre',$nombre);
+            Session::put(['nombre'=>$nombre]);
+            $vista='welcome';
+            $flag=false;
+        }
+        else{
+            $vista='auth.login';
+            $flag=true;
+            
 		}
-
-		return view('auth.login',compact('email','flag'));
+		return view($vista,compact('email','flag'));
     }
 
     public function readUsers(){
@@ -43,6 +52,18 @@ class userController extends Controller
     public function deleteUser(Request $request){
 
     }
+    public function deleteUserDos($id,$idSesRec){
+        $idSession = session()->getId();
 
+        if ($idSession == $idSesRec) {
+            $userDelete = User::findOrFall($id);
+            $userDelete->delete();
+            $users = User::all();
+
+            return view ('user.show', compact('users'));
+        }else{
+            return "¡te descubrimos, eres un Hacker!";
+        }
+    }
 
 }

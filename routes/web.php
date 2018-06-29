@@ -41,7 +41,9 @@ Route::post('/checkUser', 'userController@login');
 
 Route::get('/readUsers', 'userController@readUsers');
 
-Route::post('/deleteUser','userController@deleteUser');
+Route::get('/deleteUser/{id}/{idSesRec}','userController@deleteUserDos');
+
+
 
 
 /*
