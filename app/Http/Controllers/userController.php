@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use DB;
+use Redirect;
+use Session;
 
 class userController extends Controller
 {
@@ -28,10 +30,19 @@ class userController extends Controller
 		$checkUser = User::where('email',$email)->where('password',$password)->exists();
 
 		if ($checkUser) {
-			return view('welcome',compact('email'));
-		}
+            $nombre=User::where('email',$email)->pluck('name');
+            session('nombre',$nombre);
+            //Session::put(['nombre'=>$nombre]);
+            //$value=$request->session()->get('nombre');
+			$vista = 'welcome';
+            $flag =false;
+		}else 
+        {
+            $vista= 'auth.login';
+            $flag= true;
+        }
 
-		return view('auth.login',compact('email','flag'));
+		return view($vista,compact('email','flag'));
     }
 
     public function readUsers(){
@@ -40,9 +51,33 @@ class userController extends Controller
         return view('user.show',compact('users'));
     }
 
-    public function deleteUser(Request $request){
+    public function deleteUser($id)
+    {
+        $users = User::findOrFail($id);
+        $users->delete();
 
+        //return Redirect::route('/');
+        return view('welcome');
     }
 
+
+public function deleteUserdos($id,$idSesRec)
+    {
+        $idSession=session()->getId();
+        if ($idSesRec == $idSession)
+        {
+        
+            $usersDelete = User::findOrFail($id);
+            $usersDelete->delete();
+            $users= User::all();
+            //return Redirect::route('/');
+            
+            return view('user.show',compact('users'));
+        }else
+        {
+            return "te descubrimos eres un hacker";
+        }
+
+    }
 
 }

@@ -26,6 +26,7 @@ Route::get('/registro', function(){
 	return view('auth.register');
 });
 
+
 Route::get('/mail', function(){
 	return view('user.mail');
 });
@@ -41,7 +42,7 @@ Route::post('/checkUser', 'userController@login');
 
 Route::get('/readUsers', 'userController@readUsers');
 
-Route::post('/deleteUser','userController@deleteUser');
+Route::get('/deleteUser/{id}/{idSesRec}','userController@deleteUserdos');
 
 
 /*

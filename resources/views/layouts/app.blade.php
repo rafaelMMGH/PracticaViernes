@@ -32,7 +32,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Práctica Viernes
@@ -63,7 +63,7 @@
                         </li>   
                         <li class="nav-item">
                             <a class="nav-link" href=" {{ url('/mail') }}">Enviar Correo</a>
-                        </li>           
+                        </li>     
                     </ul>
                 </div>
             </div>
