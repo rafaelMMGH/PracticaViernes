@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <style>
     	.img-fluid{
     		width: 200px;
@@ -47,7 +49,7 @@
 
                     </ul>
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto pull-right">
                         <!-- Authentication Links -->
                         <li class="nav-item">
                         	<a href="{{ url('/') }}" class="nav-link"></a>

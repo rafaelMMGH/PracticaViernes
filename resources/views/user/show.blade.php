@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@if( session()->exists('nombre'))
 
 <table class="table table-hover">
   <thead class="thead-dark">
@@ -11,6 +12,7 @@
       <th scope="col">Apellido Materno</th>
       <th scope="col">Correo</th>
       <th scope="col">Sexo</th>
+      <th scope="col">Acción</th>
     </tr>
   </thead>
   <tbody>
@@ -22,20 +24,15 @@
 	      <td>{{$user->apMaterno}}</td>
 	      <td>{{$user->email}}</td>
 	      <td>{{$user->sex}}</td>
+        <td>
+          <a href="/deleteUser/{{$user->id}}/{{session()->getId()}}" class="btn btn-info btn-sm">
+            <span class="glyphicon glyphicon-remove"></span> Remove 
+          </a>
+        </td>
 	    </tr>
 	@endforeach    
-
-
   </tbody>
 </table>
 
-
-
-
-
-
-
-
-
-
+@endif
 @endsection
