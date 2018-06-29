@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    
     <style>
     	.img-fluid{
     		width: 200px;
@@ -63,7 +65,11 @@
                         </li>   
                         <li class="nav-item">
                             <a class="nav-link" href=" {{ url('/mail') }}">Enviar Correo</a>
-                        </li>           
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/registro2') }}">Registro-2</a>
+                        </li>
+       
                     </ul>
                 </div>
             </div>
