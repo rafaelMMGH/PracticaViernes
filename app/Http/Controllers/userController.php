@@ -80,9 +80,10 @@ public function deleteUserdos($id,$idSesRec)
 
     }
 
-    public function loout()
+    public function loout(Request $request)
     {
-      
+        
+        $request->session()->forget('nombre');
         return view('welcome');
     }
 
