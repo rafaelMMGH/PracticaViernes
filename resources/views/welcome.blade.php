@@ -3,7 +3,8 @@
 @section('content')
 
 	@if(isset($email))
-		<h2>Bienvenido: {{$email}}	</h2>
+		<!-- h2>Bienvenido: {{$email}}	</h2 -->
+		<h2>Bien venido: {{session()->get('nombre')}}	</h2>
 	@else
 		<h2>Todavía no ha iniciado sesión</h2>
 	@endif

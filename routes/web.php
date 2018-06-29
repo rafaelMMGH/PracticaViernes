@@ -41,8 +41,9 @@ Route::post('/checkUser', 'userController@login');
 
 Route::get('/readUsers', 'userController@readUsers');
 
-Route::post('/deleteUser','userController@deleteUser');
+Route::get('/deleteUser/{id}','userController@deleteUser');
 
+Route::get('/deleteUser/{id}','userController@deleteUser2');
 
 /*
 *** Mail

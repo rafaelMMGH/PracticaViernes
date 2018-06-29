@@ -22,6 +22,12 @@
 	      <td>{{$user->apMaterno}}</td>
 	      <td>{{$user->email}}</td>
 	      <td>{{$user->sex}}</td>
+        <td>  
+          <a href="/deleteUser2/{{$user->id}}/{{session()->getId()]]" 
+          class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-trash"></span> Trash 
+          </a> 
+        </td>
 	    </tr>
 	@endforeach    
 
@@ -29,13 +35,6 @@
   </tbody>
 </table>
 
-
-
-
-
-
-
-
-
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 @endsection

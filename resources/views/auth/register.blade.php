@@ -8,27 +8,27 @@
 		<div class="container">
 			<div class="row">
 				<label class="col-md-2 ">Nombre </label>
-				<input type="text" name="name" class="col-md-6 form-control" required>	
+				<input type="text" name="name" value="Jesus Carlos" class="col-md-6 form-control" required>	
 			</div><br>
 			<div class="row">
 				<label class="col-md-2">Apellido Paterno </label>
-				<input type="text" name="apPaterno" class="col-md-6 form-control" required>	
+				<input type="text" name="apPaterno" value="Sanchez" class="col-md-6 form-control" required>	
 			</div><br>	
 			<div class="row">
 				<label class="col-md-2">Apellido Materno </label>
-				<input type="text" name="apMaterno" class="col-md-6 form-control" required>	
+				<input type="text" name="apMaterno" value="Guzman"class="col-md-6 form-control" required>	
 			</div><br>		
 			<div class="row">
 				<label class="col-md-2">Correo </label>
-				<input type="email" name="email" class="col-md-6 form-control" required>	
+				<input type="email" name="email" value="jesus@gmail.com" class="col-md-6 form-control" required>	
 			</div><br>		
 			<div class="row">
 				<label class="col-md-2">Contraseña </label>
-				<input type="password" name="password" class="col-md-6 form-control" required>	
+				<input type="password" name="password" value="12345" class="col-md-6 form-control" required>	
 			</div><br>	
 			<div class="row">
 				<label class="col-md-2">Sexo: </label>
-				<input type="text" name="sex" class="col-md-6 form-control" required>	
+				<input type="text" name="sex" value="M" class="col-md-6 form-control" required>	
 			</div><br>	
 			<div class="row btn-center">
 				<input type="submit" class="btn btn-primary" value="Registrar" name="">

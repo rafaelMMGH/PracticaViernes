@@ -14,11 +14,11 @@
 		<div class="container ">
 			<div class="row">
 				<label class="col-md-2 ">Correo </label>
-				<input type="email" name="email" class="col-md-6 form-control" required>	
+				<input type="email" name="email" value="jesus@gmail.com" class="col-md-6 form-control" required>	
 			</div><br>
 			<div class="row">
 				<label class="col-md-2">Contraseña </label>
-				<input type="password" name="password" class="col-md-6 form-control" required>	
+				<input type="password" name="password" value="12345" class="col-md-6 form-control" required>	
 			</div><br><br>
 			<div class="row btn-center">
 				<input type="submit" class="btn btn-primary" value="Entrar" name="">
