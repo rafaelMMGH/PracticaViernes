@@ -37,8 +37,8 @@ class userController extends Controller
             $nombre=User::where('email',$email)->pluck('name');
 
             //se crea la variable de sesión
-            Session('nombre',$nombre);
-            //Session::put(['nombre'=>$nombre]); //otra forma de hacer lo mismo que la linea anterior
+            //Session('nombre',$nombre); //esta linea me falló, usar la siguiente
+            Session::put(['nombre'=>$nombre]); //otra forma de hacer lo mismo que la linea anterior
 
             $vista='welcome';
             $flag = false;
